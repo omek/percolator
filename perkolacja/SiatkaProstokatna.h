@@ -5,7 +5,7 @@ class SiatkaProstokatna {
 public:
 	SiatkaProstokatna(int w, int h, float p);
 	~SiatkaProstokatna();
-	void sprawdz();
+	bool sprawdz();
 	void pokaz();
 private:
 	int Width;

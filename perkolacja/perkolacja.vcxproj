@@ -151,10 +151,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="MonteCarlo.cpp" />
     <ClCompile Include="perkolacja.cpp" />
     <ClCompile Include="SiatkaProstokatna.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MonteCarlo.h" />
     <ClInclude Include="SiatkaProstokatna.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
