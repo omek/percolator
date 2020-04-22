@@ -1,7 +1,4 @@
-﻿  SiatkaProstokatna.cpp
-g:\visual studio 2017\source\repos\perkolacja\perkolacja\siatkaprostokatna.cpp(14): warning C4018: '<': signed/unsigned mismatch
-g:\visual studio 2017\source\repos\perkolacja\perkolacja\siatkaprostokatna.cpp(15): warning C4018: '<': signed/unsigned mismatch
-g:\visual studio 2017\source\repos\perkolacja\perkolacja\siatkaprostokatna.cpp(27): warning C4018: '<': signed/unsigned mismatch
-g:\visual studio 2017\source\repos\perkolacja\perkolacja\siatkaprostokatna.cpp(34): warning C4018: '<': signed/unsigned mismatch
-g:\visual studio 2017\source\repos\perkolacja\perkolacja\siatkaprostokatna.cpp(35): warning C4018: '<': signed/unsigned mismatch
+﻿  perkolacja.cpp
+g:\visual studio 2017\source\repos\perkolacja\perkolacja\perkolacja.cpp(9): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+g:\visual studio 2017\source\repos\perkolacja\perkolacja\perkolacja.cpp(20): warning C4018: '<': signed/unsigned mismatch
   perkolacja.vcxproj -> G:\Visual Studio 2017\source\repos\perkolacja\Debug\perkolacja.exe

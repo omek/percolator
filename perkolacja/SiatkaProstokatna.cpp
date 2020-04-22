@@ -33,7 +33,7 @@ bool SiatkaProstokatna::sprawdz() {
 		zmiana = false;
 		for (int i = 0; i < siatka_bazowa.size(); i++) {
 			for (int j = 0; j < siatka_bazowa[i].size(); j++) {
-				if (siatka_perkolacji[i][j] == true) {
+				if (siatka_perkolacji[i][j]) {
 					if (i < Height - 1) {
 						if (siatka_bazowa[i + 1][j] && !siatka_perkolacji[i + 1][j]) {
 							siatka_perkolacji[i + 1][j] = true;
