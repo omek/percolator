@@ -9,6 +9,6 @@ public:
 private:
 	int ilosc_symulacji;
 	int Width;
-	int Heigth;
+	int Height;
 	std::vector<int>wektor_p;
 };

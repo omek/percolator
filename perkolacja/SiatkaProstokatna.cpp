@@ -23,69 +23,43 @@ void SiatkaProstokatna::pokaz() {
 	std::cout << std::endl;
 }
 
+void SiatkaProstokatna::sprawdzRekurencja(std::vector<std::vector<bool>> &siatka_bazowa, std::vector<std::vector<bool>> &siatka_perkolacji, int h, int w) {
+	siatka_perkolacji[h][w] = true;
+	if (h < Height - 1) {
+		if (siatka_bazowa[h + 1][w] && !siatka_perkolacji[h + 1][w]) {
+			sprawdzRekurencja(siatka_bazowa, siatka_perkolacji, h + 1, w);
+		}
+	}
+	if (w < Width - 1) {
+		if (siatka_bazowa[h][w + 1] && !siatka_perkolacji[h][w + 1]) {
+			sprawdzRekurencja(siatka_bazowa, siatka_perkolacji, h, w + 1);
+		}
+	}
+	if (w > 0) {
+		if (siatka_bazowa[h][w - 1] && !siatka_perkolacji[h][w - 1]) {
+			sprawdzRekurencja(siatka_bazowa, siatka_perkolacji, h, w - 1);
+		}
+	}
+	if (h > 0) {
+		if (siatka_bazowa[h - 1][w] && !siatka_perkolacji[h - 1][w]) {
+			sprawdzRekurencja(siatka_bazowa, siatka_perkolacji, h - 1, w);
+		}
+	}
+}
 
 bool SiatkaProstokatna::sprawdz() {
 
 	std::vector<std::vector<bool>>siatka_perkolacji(Height, std::vector<bool>(Width));
 	for (int i = 0; i < siatka_bazowa[0].size(); i++)
 		if (siatka_bazowa[0][i])
-			siatka_perkolacji[0][i] = true;
-
-	bool zmiana = true;
-	while (zmiana) {
-		zmiana = false;
-		for (int i = 0; i < siatka_bazowa.size(); i++) {
-			for (int j = 0; j < siatka_bazowa[i].size(); j++) {
-				if (siatka_perkolacji[i][j]) {
-					if (i < Height - 1) {
-						if (siatka_bazowa[i + 1][j] && !siatka_perkolacji[i + 1][j]) {
-							siatka_perkolacji[i + 1][j] = true;
-							zmiana = true;
-						}
-					}
-					if (j < Width - 1) {
-						if (siatka_bazowa[i][j + 1] && !siatka_perkolacji[i][j + 1]) {
-							siatka_perkolacji[i][j + 1] = true;
-							zmiana = true;
-						}
-					}
-					if (j > 0) {
-						if (siatka_bazowa[i][j - 1] && !siatka_perkolacji[i][j - 1]) {
-							siatka_perkolacji[i][j - 1] = true;
-							zmiana = true;
-						}
-					}
-					if (i > 0) {
-						if (siatka_bazowa[i - 1][j] && !siatka_perkolacji[i - 1][j]) {
-							siatka_perkolacji[i - 1][j] = true;
-							zmiana = true;
-						}
-					}
-				}
-			}
-		}
-	}
-	
-	//wydruk macierzy po sprawdzaniu
-	/*
-	for (int i = 0; i < siatka_perkolacji.size(); i++) {
-		for (int j = 0; j < siatka_perkolacji[i].size(); j++) {
-			std::cout << siatka_perkolacji[i][j];
-		}
-		std::cout << std::endl;
-	}
-	std::cout << std::endl;
-	*/
+			sprawdzRekurencja(siatka_bazowa, siatka_perkolacji, 0, i);
 
 	bool perk = false;
 	for (int j = 0; j < Width - 1; j++) {
 		if (siatka_perkolacji[Height - 1][j])
-			perk = true;
+			return true;
 	}
-	if (perk)
-		return true;
-	else
-		return false;
+	return false;
 }
 
 

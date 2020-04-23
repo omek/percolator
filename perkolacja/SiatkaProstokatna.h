@@ -6,6 +6,7 @@ public:
 	SiatkaProstokatna(int w, int h);
 	~SiatkaProstokatna();
 	bool sprawdz();
+	void sprawdzRekurencja(std::vector<std::vector<bool>> &siatka_bazowa,std::vector<std::vector<bool>> &siatka_perkolacji, int h,int w);
 	void pokaz();
 	void losuj(int prawdopodobienstwo);
 private:

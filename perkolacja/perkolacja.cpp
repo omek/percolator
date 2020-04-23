@@ -10,7 +10,7 @@ int main()
 	std::srand(time(NULL));
 	int x = 10;
 	int y = 10;
-	int iloscSymulacji = 1000;
+	int iloscSymulacji = 10000;
 	std::vector<int>iPerkolacja;
 	std::vector<int>WynikiSymulacji;
 
