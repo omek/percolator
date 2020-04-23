@@ -2,10 +2,13 @@
 
 #include <iostream>
 
-SiatkaProstokatna::SiatkaProstokatna(int w, int h, float p) :siatka_bazowa(h, std::vector<bool>(w,false)),Width(w),Height(h) {
-	for (int i = 0; i < h; i++) {
-		for (int j = 0; j < w; j++) {
-			siatka_bazowa[i][j] = (rand() % 100 <= p);
+SiatkaProstokatna::SiatkaProstokatna(int w, int h):siatka_bazowa(h, std::vector<bool>(w,false)),Width(w),Height(h) {
+}
+
+void SiatkaProstokatna::losuj(int prawdopodobienstwo){
+	for (int i = 0; i < Height; i++) {
+		for (int j = 0; j < Width; j++) {
+			siatka_bazowa[i][j] = (rand() % 100 <= prawdopodobienstwo);
 		}
 	}
 }

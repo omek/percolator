@@ -6,18 +6,18 @@ MonteCarlo::MonteCarlo(int ilosc, std::vector<int> wektor_prawdopodobienstw, int
 
 std::vector<int> MonteCarlo::Symulacja() {
 
-	int wynik = 0;
+	
 	std::vector<int>Wyniki(wektor_p.size()*ilosc_symulacji);
-
+	SiatkaProstokatna s(Width, Heigth);
 	for (int z = 0; z < wektor_p.size(); z++) {
+		int wynik = 0;
 		for (int i = 0; i < ilosc_symulacji; i++) {
-			SiatkaProstokatna s(Width, Heigth, wektor_p[z]);
+			s.losuj(wektor_p[z]);
 			if (s.sprawdz()) {
 				wynik++;
 				Wyniki[z] = wynik;
 			}
 		}
-		wynik = 0;
 	}
 	return Wyniki;
 }

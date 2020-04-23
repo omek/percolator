@@ -3,10 +3,11 @@
 #include <time.h>
 class SiatkaProstokatna {
 public:
-	SiatkaProstokatna(int w, int h, float p);
+	SiatkaProstokatna(int w, int h);
 	~SiatkaProstokatna();
 	bool sprawdz();
 	void pokaz();
+	void losuj(int prawdopodobienstwo);
 private:
 	int Width;
 	int Height;
