@@ -14,7 +14,7 @@ int main()
 	std::vector<int>iPerkolacja;
 	std::vector<int>WynikiSymulacji;
 
-	for (int i = 0; i < 100; i += 10){
+	for (int i = 0; i < 100; i += 10) {
 		iPerkolacja.push_back(i);
 	}
 

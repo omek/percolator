@@ -47,16 +47,15 @@ void SiatkaProstokatna::sprawdzRekurencja(std::vector<std::vector<bool>> &siatka
 	}
 }
 
-bool SiatkaProstokatna::sprawdz() {
+bool SiatkaProstokatna::sprawdz(std::vector<std::vector<bool>> sP) {
 
-	std::vector<std::vector<bool>>siatka_perkolacji(Height, std::vector<bool>(Width));
 	for (int i = 0; i < siatka_bazowa[0].size(); i++)
 		if (siatka_bazowa[0][i])
-			sprawdzRekurencja(siatka_bazowa, siatka_perkolacji, 0, i);
+			sprawdzRekurencja(siatka_bazowa, sP, 0, i);
 
-	bool perk = false;
+
 	for (int j = 0; j < Width - 1; j++) {
-		if (siatka_perkolacji[Height - 1][j])
+		if (sP[Height - 1][j])
 			return true;
 	}
 	return false;

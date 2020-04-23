@@ -1,0 +1,18 @@
+﻿  MonteCarlo.cpp
+g:\visual studio 2017\source\repos\perkolacja\perkolacja\montecarlo.cpp(14): warning C4018: '<': signed/unsigned mismatch
+g:\visual studio 2017\source\repos\perkolacja\perkolacja\montecarlo.cpp(23): warning C4018: '<': signed/unsigned mismatch
+g:\visual studio 2017\source\repos\perkolacja\perkolacja\montecarlo.cpp(24): warning C4018: '<': signed/unsigned mismatch
+  perkolacja.cpp
+g:\visual studio 2017\source\repos\perkolacja\perkolacja\perkolacja.cpp(10): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+g:\visual studio 2017\source\repos\perkolacja\perkolacja\perkolacja.cpp(28): warning C4018: '<': signed/unsigned mismatch
+g:\visual studio 2017\source\repos\perkolacja\perkolacja\perkolacja.cpp(29): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  SiatkaProstokatna.cpp
+g:\visual studio 2017\source\repos\perkolacja\perkolacja\siatkaprostokatna.cpp(17): warning C4018: '<': signed/unsigned mismatch
+g:\visual studio 2017\source\repos\perkolacja\perkolacja\siatkaprostokatna.cpp(18): warning C4018: '<': signed/unsigned mismatch
+g:\visual studio 2017\source\repos\perkolacja\perkolacja\siatkaprostokatna.cpp(52): warning C4018: '<': signed/unsigned mismatch
+  Generating code
+  305 of 305 functions (100.0%) were compiled.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  perkolacja.vcxproj -> G:\Visual Studio 2017\source\repos\perkolacja\Release\perkolacja.exe
