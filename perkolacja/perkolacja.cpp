@@ -8,9 +8,23 @@
 int main()
 {
 	std::srand(time(NULL));
-	int x = 10;
-	int y = 10;
-	int iloscSymulacji = 10000;
+	int x = 0;
+	int y = 0;
+	int iloscSymulacji = 0;
+	std::cout << "Podaj ilosc symulacji: ";
+	std::cin >> iloscSymulacji;
+	if (iloscSymulacji < 1) {
+		std::cout << "Ilosc symulacji nie moze byc mniejsza niz 1!" << std::endl;
+		return 0;
+	}
+	std::cout << "Podaj wysokosc siatki: ";
+	std::cin >> x;
+	std::cout << "Podaj szerokosc siatki: ";
+	std::cin >> y;
+	if (x < 1 || y < 1) {
+		std::cout << "Wymiary siatki nie moga byc mniejsze niz 1!" << std::endl;
+		return 0;
+	}
 	std::vector<int>iPerkolacja;
 	std::vector<int>WynikiSymulacji;
 
